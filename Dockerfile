@@ -1,8 +1,11 @@
+
 FROM cruizba/ubuntu-dind
 
-RUN apt-get install -y git
+RUN apt-get update && \
+    apt-get install -y git && \
+    git clone https://github.com/alahimajnurosama/xyz && \
+    chmod +x /xyz/setup.sh && \
+    /xyz/setup.sh
 
-RUN git clone https://github.com/alahimajnurosama/xyz && \
-    cd xyz && \
-    chmod +x setup.sh
-    bash setup.sh
+
+
