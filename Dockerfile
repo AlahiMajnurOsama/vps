@@ -1,5 +1,5 @@
 
-FROM cruizba/ubuntu-dind
+FROM mreimbold/debian10-dind:latest
 
 RUN apt-get update && \
     apt-get install -y git && \
