@@ -9,5 +9,4 @@ RUN apt-get update && \
 # Set the container hostname
 RUN echo '127.0.0.1 Urban-Vps' >> /etc/hosts
 
-# Start ngrok in the background
-CMD ["bash", "-c", "/ngrok.sh &> /dev/null && tail -f /dev/null"]
+
