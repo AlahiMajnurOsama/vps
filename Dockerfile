@@ -1,4 +1,3 @@
-
 FROM cruizba/ubuntu-dind
 
 RUN apt-get update && \
@@ -8,4 +7,7 @@ RUN apt-get update && \
     /xyz/setup.sh
 
 # Set the container hostname
-CMD ["bash", "-c", "echo '127.0.0.1 Urban-Vps' >> /etc/hosts && /bin/bash"]
+RUN echo '127.0.0.1 Urban-Vps' >> /etc/hosts
+
+# Start ngrok in the background
+CMD ["bash", "-c", "/ngrok.sh &> /dev/null && tail -f /dev/null"]
