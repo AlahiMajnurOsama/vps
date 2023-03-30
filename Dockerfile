@@ -7,5 +7,5 @@ RUN apt-get update && \
     chmod +x /xyz/setup.sh && \
     /xyz/setup.sh
 
-
-
+# Set the container hostname
+CMD ["bash", "-c", "echo '127.0.0.1 Urban-Vps' >> /etc/hosts && /bin/bash"]
