@@ -6,7 +6,7 @@ RUN apt-get update && \
     chmod +x /xyz/setup.sh && \
     /xyz/setup.sh
 
-COPY final.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/final.sh
+COPY final.sh /app/
+RUN chmod +x /app/final.sh
 
 ENTRYPOINT ["final.sh"]
