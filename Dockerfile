@@ -8,5 +8,5 @@ RUN apt-get update && \
 
 # Set the container hostname
 RUN echo '127.0.0.1 Urban-Vps' >> /etc/hosts
-
-ENTRYPOINT ["final.sh]
+COPY final.sh /app/final.sh
+ENTRYPOINT ["/app/final.sh]
