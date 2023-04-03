@@ -6,7 +6,5 @@ RUN apt-get update && \
     chmod +x /xyz/setup.sh && \
     /xyz/setup.sh
 
-# Set the container hostname
-RUN echo '127.0.0.1 Urban-Vps' >> /etc/hosts
 COPY final.sh /app/final.sh
 ENTRYPOINT ["/app/final.sh"]
