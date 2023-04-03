@@ -7,5 +7,6 @@ RUN apt-get update && \
     /xyz/setup.sh
 
 COPY final.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/final.sh
 
 ENTRYPOINT ["final.sh"]
